@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<center> <image src='/shoebox/static/images/shoelogo.png' /> </center><HR>
+
+<p> This is an auto-generated page for the author you have clicked on. At this time the page only shows the articles the author wrote but much more can be done with the page in the future. Clicking the back arrow errors out at the moment, please use the links at the top bar to re-navigate back! The page also has a bug where if you try to go to the Dashboard page from one of the auto-generated pages then it errors out. Will fix this in the near future. </p> <HR>
+
+<h4> Author: {{=author.first_name}} {{=author.last_name}} </h4> <HR>
+<h5> Published Articles </h5>
+{{for row in query:}}
+<p><a href="{{=URL('article_CLICK', args=row.id)}}"> Title: {{=row.title}} <BR>
+Date: {{=row.articleDate}} </a></p>
+{{pass}}

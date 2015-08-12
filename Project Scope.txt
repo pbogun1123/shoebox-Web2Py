@@ -1,0 +1,5 @@
+Application Scope
+
+This simple application follows a Business-to-Consumer model which targets any individual or group who are interested in computer hardware or software (and more diverse topics as more work is put into the application). The projects allows a clean interface to post, search, and read articles about the computer industry. This provides a one stop application to view/read articles.
+
+This is an early concept and is easily expanded as the project is further developed.

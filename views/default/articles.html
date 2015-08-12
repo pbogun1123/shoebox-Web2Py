@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<center> <image src='/shoebox/static/images/shoelogo.png' /> </center><HR>
+
+<center><h2> Articles </h2></center>
+
+<p> This page allows you to search all the ShoeBox articles submitted. Type in any keyword or phrase in the "Keyword" field bellow and click "Submit" to begin your search. If you want to read an article simply click on it after you have completed a search. For testing purposes it does not matter which article you try to search/read.</p><HR>
+
+{{=form}}
+
+<table class = "table">
+{{for row in rows:}}
+<tr><th><a href="{{=URL('article_CLICK', args=row.id)}}"> 
+Title: {{=row.title}} </BR> 
+Date: {{=row.articleDate}} </BR>
+Author: {{=row.articleOwner.first_name}} {{=row.articleOwner.last_name}} </a></th></tr>
+{{pass}}
+</table>

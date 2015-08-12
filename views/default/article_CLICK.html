@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+<center> <image src='/shoebox/static/images/shoelogo.png' /> </center> <HR>
+
+<p> This is an auto-generated page for the article you have clicked on. The page simply shows the article title, author, and the content. Clicking the back arrow errors out at the moment, please use the links at the top bar to re-navigate back! The page also has a bug where if you try to go to the Dashboard page from one of the auto-generated pages then it errors out. Will fix this in the near future. </p> <HR>
+
+<h4> {{=article.title}} </h4>
+<h8> Written By: {{=article.articleOwner.first_name}} {{=article.articleOwner.last_name}} </h8> </BR>
+<hr>
+<p> {{=PRE(article.articleContent)}} </p>
+{{pass}}
+

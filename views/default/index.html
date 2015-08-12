@@ -1,0 +1,31 @@
+{{extend 'layout.html'}}
+<center> <image src='/shoebox/static/images/shoelogo.png' /> </center><HR>
+
+<p> The index page contains general application information. I have not yet implemented any features with videos (import/youtube/etc.) and the mailing list at the bottom of the page does nothing. The posts are automated via the dashboard if logged onto an administrator account (check the second post titled "ShoeBox Featured Posts!" for more information!). </p> <HR>
+
+
+{{for row in query:}}
+<H3> {{=row.postTitle}} </H3>
+<H6> Author: {{=row.postAuthor.first_name}} {{=row.postAuthor.last_name}} </H6>
+<image src = '/shoebox/static/images/avatar.jpg', size: "60x60" />
+<P> {{=PRE(row.postContent)}} </P><HR>
+{{pass}}
+
+
+<h2> Featured Video </h2>
+<p> Talk by DePaul's own Massimo Di Pierro at PyCon 2012! </p>
+<H5> Note: This part is not automated yet, will add functionality in the future! </H5>
+<iframe width="560" height="315" src="//www.youtube.com/embed/iMUX9NdN8YE" frameborder="0" allowfullscreen></iframe>
+	
+<hr>
+
+<div id="mailContent";>			
+	<form name="mailingInformation">
+		<p><h5>Join our mailing list to stay up to date on current specials!</h5></p>
+		<h6> Note: This feature is not yet implemented! Nothing happens with this form. </h6>
+		<p>Name: <input type="text" name="txtName" maxlength="50" /></p>
+		<p>E-Mail: <input type="text" name="txtEmail" maxlength="50" /></p><BR />
+		<input type="submit" name="btnSubmit" value="Subscribe to Mailing List!" onClick="mailsubmit()" />
+	</form>
+</div>
+
